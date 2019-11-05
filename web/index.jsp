@@ -14,20 +14,18 @@
 </head>
 <body>
 <form method="post" action="/calculate">
-<fieldset>
-    <legend>Calculator</legend>
-    <p>First operand: <input type="number" name="operand1" placeholder="First operand..." value=""></p>
-    <p>Operator: <select name="operator">
-      <option value="+" <%
-        String operator = "";
-        if (operator.equals("+")) {%> selected <%}%>>Addition</option>
-      <option value="-"<%if (operator.equals("-")) {%> selected <%}%>>Subtraciton</option>
-      <option value="*"<%if (operator.equals("*")) {%> selected <%}%>>Multiplication</option>
-      <option value="/"<%if (operator.equals("/")) {%> selected <%}%>>Division</option>
-    </select></p>
-    <p>Second operand: <input type="number" name="operand2" placeholder="Second operand..." value=""></p>
-    <input type="submit" id="submit" value="Calculate"/>
-</fieldset>
+    <fieldset>
+        <legend>Calculator</legend>
+        <p>First operand: <input type="number" name="operand1" placeholder="First operand..." value=""></p>
+        <p>Operator: <select name="operator">
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Multiplication</option>
+            <option value="/">Division</option>
+        </select></p>
+        <p>Second operand: <input type="number" name="operand2" placeholder="Second operand..." value=""></p>
+        <input type="submit" id="submit" value="Calculate"/>
+    </fieldset>
 </form>
 </body>
 </html>

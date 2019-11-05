@@ -25,8 +25,11 @@ public class CalculatorServlet extends HttpServlet {
                 result = operand1 * operand2;
                 break;
             case "/":
-                result = operand1 / operand2;
-                break;
+                if(operand2 != 0)
+                    result = (operand1 / operand2);
+                else
+                    throw new RuntimeException("Can't divide by zero");
+            break;
         }
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
